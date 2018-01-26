@@ -59,21 +59,7 @@ public class LonelyTwitterActivity extends Activity {
 
 			}
 		});
-		Button clearButton = (Button) findViewById(R.id.clear);
-		clearButton.setOnClickListener(new View.OnClickListener(){
-			public void clear(View view){
-				setResult(RESULT_CANCELED);
-				tweetlist.removeAll(tweetlist);
 
-				oldTweetsList.removeAllViewsInLayout();
-				oldTweetsList.onRemoteAdapterDisconnected();
-
-				deleteFile(FILENAME);
-				adapter.notifyDataSetChanged();
-
-			}
-
-		});
 	}
 
 	@Override
@@ -135,6 +121,12 @@ public class LonelyTwitterActivity extends Activity {
 	protected void onDestroy(){
 		super.onDestroy();
 		Log.i("In Destroy method","The app is closing");
+	}
+	public void clearButton(View view){
+		oldTweetsList.onRemoteAdapterDisconnected();
+		oldTweetsList.removeAllViewsInLayout();
+		deleteFile("newfile.sav");
+		deleteFile(FILENAME);
 	}
 
 
