@@ -1,3 +1,12 @@
+
+
+/*
+ * Copyright (c) 2018 Team x. CMPUT 301. University of Alberta. All Rights Reserved.
+ *  You may use, distribute or modify this code under the terms and conditions of the
+ *  Code of Student Behaviour at the University of Alberta
+ *  <You can find a copy of the license in this project> Otherwise please see <http://www.gnu.org/licenses/>
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
